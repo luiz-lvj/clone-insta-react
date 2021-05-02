@@ -58,7 +58,7 @@ function PostBottom(props){
 function BottomLikes(props){
     return(
         <div class="curtidas">
-            <img src={props.imageLikes} />
+            <img src={props.imageLikes} alt=""/>
             <div class="texto">
             Curtido por <strong>{props.userLike}</strong> e <strong>outras {props.numberLikes} pessoas</strong>
             </div>
@@ -85,7 +85,7 @@ function PostTop(props){
     return(
         <div class="topo">
             <div class="usuario">
-                <img src={props.userImage} />
+                <img src={props.userImage} alt=""/>
                 {props.userPost}
             </div>
             <div class="acoes">
@@ -98,7 +98,7 @@ function PostTop(props){
 function PostContent(props){
     return(
         <div class="conteudo">
-            <img src={props.postImage} />
+            <img src={props.postImage} alt=""/>
         </div>
     );
 }

@@ -54,7 +54,7 @@ function SingleSuggestion(props){
     return(
         <div class="sugestao">
             <div class="usuario">
-                <img src={props.image} />
+                <img src={props.image} alt=""/>
                 <div class="texto">
                   <div class="nome">{props.profile}</div>
                   <div class="razao">Segue você</div>
@@ -68,7 +68,7 @@ function SingleSuggestion(props){
 function SelfUser(){
     return(
         <div class="usuario">
-            <img src={userInfo.image} />
+            <img src={userInfo.image} alt=""/>
             <div class="texto">
                 <strong>{userInfo.profile}</strong>
                 {userInfo.name}
