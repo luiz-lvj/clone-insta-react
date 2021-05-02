@@ -1,7 +1,7 @@
 export default function Navbar(){
     return (
-        <div className="navbar">
-            <div className="container">
+        <div class="navbar">
+            <div class="container">
                 <Logo/>
                 <LogoMobile/>
                 <InstagramMobile/>
@@ -15,9 +15,9 @@ export default function Navbar(){
 
 function Logo(){
     return(
-        <div className="logo">
+        <div class="logo">
             <ion-icon name="logo-instagram"></ion-icon>
-            <div className="separador"></div>
+            <div class="separador"></div>
             <img src="assets/img/logo.png" alt=""/>
         </div>
     );
@@ -25,7 +25,7 @@ function Logo(){
 
 function LogoMobile(){
     return(
-        <div className="logo-mobile">
+        <div class="logo-mobile">
             <ion-icon name="logo-instagram"></ion-icon>
         </div>
     );
@@ -33,7 +33,7 @@ function LogoMobile(){
 
 function InstagramMobile(){
     return(
-        <div className="instagram-mobile">
+        <div class="instagram-mobile">
             <img src="assets/img/logo.png" alt=""/>
         </div>
     );
@@ -41,7 +41,7 @@ function InstagramMobile(){
 
 function Search(){
     return(
-        <div className="pesquisa">
+        <div class="pesquisa">
             <input type="text" placeholder="Pesquisar" />
         </div>
     );
@@ -49,7 +49,7 @@ function Search(){
 
 function Icons(){
     return(
-        <div className="icones">
+        <div class="icones">
             <ion-icon name="paper-plane-outline"></ion-icon>
             <ion-icon name="compass-outline"></ion-icon>
             <ion-icon name="heart-outline"></ion-icon>
@@ -60,7 +60,7 @@ function Icons(){
 
 function MobileIcons(){
     return(
-        <div className="icones-mobile">
+        <div class="icones-mobile">
             <ion-icon name="paper-plane-outline"></ion-icon>
         </div>
     );
