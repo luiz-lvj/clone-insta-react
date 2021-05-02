@@ -18,7 +18,7 @@ function Logo(){
         <div className="logo">
             <ion-icon name="logo-instagram"></ion-icon>
             <div className="separador"></div>
-            <img src="assets/img/logo.png" />
+            <img src="assets/img/logo.png" alt=""/>
         </div>
     );
 }
@@ -34,7 +34,7 @@ function LogoMobile(){
 function InstagramMobile(){
     return(
         <div className="instagram-mobile">
-            <img src="assets/img/logo.png" />
+            <img src="assets/img/logo.png" alt=""/>
         </div>
     );
 }
