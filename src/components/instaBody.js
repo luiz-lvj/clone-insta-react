@@ -1,5 +1,6 @@
 import Stories from './getStories';
 import Posts from './getPosts';
+import SideBar from './sidebar';
 
 export default function InstaBody(){
     return(
@@ -16,11 +17,5 @@ function LeftContent(){
             <Stories/>
             <Posts/>
         </div>
-    );
-}
-
-function SideBar(){
-    return(
-        <div></div>
     );
 }
