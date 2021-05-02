@@ -1,3 +1,8 @@
+const userVideos = [
+    "assets/video/video.mp4",
+    "assets/video/video.ogv"
+];
+
 const userImages = [
     "assets/img/meowed.svg",
     "assets/img/barked.svg"
@@ -30,6 +35,10 @@ export default function Posts(){
     const allPosts = getAllPosts();
     return(
         <div class="posts">
+
+            <SinglePost userImage={userImages[0]} mp4Video={userVideos[0]} ogvVideo={userVideos[1]} userPost={usersPosts[0]}
+                userLike={likedFor[0].user} numberLikes={likedFor[0].number} imageLikes={likedFor[0].image}/>
+
             {allPosts.map(post => <SinglePost userImage={post.userImage} postImage={post.postImage} userPost={post.userPost}
                 userLike={post.userLike} numberLikes={post.numberLikes} imageLikes={post.imageLikes}/>)}
         </div>
@@ -40,7 +49,9 @@ function SinglePost(props){
     return(
         <div class="post">
             <PostTop userImage={props.userImage} userPost={props.userPost}/>
-            <PostContent postImage={props.postImage}/>
+            {props.mp4Video ?
+            <PostContent mp4Video={props.mp4Video} ogvVideo={props.ogvVideo}/>
+            : <PostContent postImage={props.postImage}/>}
             <PostBottom userLike={props.userLike} numberLikes={props.numberLikes} imageLikes={props.imageLikes}/>
         </div>
     );
@@ -96,11 +107,21 @@ function PostTop(props){
 }
 
 function PostContent(props){
-    return(
+    const content = props.mp4Video ?
+    (
+        <div class="conteudo">
+            <video controls autoplay muted>
+                <source src={props.mp4Video} type="video/mp4"/>
+                <source src={props.ogvVideo} type="video/ogv"/>
+            </video>
+        </div>
+    )
+    : (
         <div class="conteudo">
             <img src={props.postImage} alt=""/>
         </div>
     );
+    return content;
 }
 
 function getAllPosts(){

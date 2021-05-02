@@ -30,7 +30,7 @@ const userSuggestions = [
 export default function SideBar(){
     return(
         <div class="sidebar">
-            <SelfUser/>
+            <SelfUser image={userInfo.image} profile={userInfo.profile} name={userInfo.name}/>
             <Suggestions/>
             <Links/>
             <Copyright/>
@@ -65,13 +65,13 @@ function SingleSuggestion(props){
     );
 }
 
-function SelfUser(){
+function SelfUser(props){
     return(
         <div class="usuario">
-            <img src={userInfo.image} alt=""/>
+            <img src={props.image} alt=""/>
             <div class="texto">
-                <strong>{userInfo.profile}</strong>
-                {userInfo.name}
+                <strong>{props.profile}</strong>
+                {props.name}
             </div>
         </div>
     );
