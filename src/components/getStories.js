@@ -20,8 +20,39 @@ const userNames = [
     "memeriagourmet",
 ];
 
+export default function Stories(){
+    const allStories = getAllStories();
+    return(
+        <div class="stories">
+            {allStories.map(storie => <SingleStorie image={storie.image}  user={storie.user} />)}
+            <StoriesArrow/>
+        </div>
+    );
+}
 
-export default function getAllStories(){
+function SingleStorie(props){
+    return(
+        <div class="story">
+            <div class="imagem">
+                <img src={props.image} />
+            </div>
+            <div class="usuario">
+            {props.user}
+            </div>
+        </div>
+    );
+}
+
+function StoriesArrow(){
+    return(
+        <div class="setinha">
+            <ion-icon name="chevron-forward-circle"></ion-icon>
+        </div>
+    );
+}
+
+
+function getAllStories(){
     let stories = [];
     for(let i = 0; i< images.length; i++){
         const storie = {
